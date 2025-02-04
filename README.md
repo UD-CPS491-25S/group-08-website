@@ -1,1 +1,2 @@
-This is a test -lexie
+### README.MD FILE
+# Organizing our Schema
