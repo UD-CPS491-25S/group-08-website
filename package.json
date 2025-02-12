@@ -1,0 +1,17 @@
+{
+  "name": "group-08-resources",
+  "version": "1.0.0",
+  "description": "1. This is a POS system. It is going to be used to track inventory, and adding/subtracting from a database, etc.\r This will include: weekly totals, considering when things go bad, identifying trends to end users such as the owner.\r 2. Categories of Food, Beverage, Apparel\r     This will then let us break these categories into at least 3 sub categories (tiers) so that we can test with products from Jake's real menu.\r 3. Need to decide what database we want to use, MongoDB vs Neo4J\r 4. SPRINT 1 will include working with the other team for how we want to represent data MAYBE?",
+  "main": "playground-1.mongodb.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "neo4j-driver": "^5.28.1"
+  }
+}
