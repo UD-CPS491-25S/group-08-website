@@ -2,10 +2,10 @@
 ### Team: Alexis Lane, Mike Frank, Megan Flynn
 
 ## Project Details
-Sponsor: Jakes on Devine - Columbia, SC
-Industry: Restarant, Bar
-Website: https://jakesofcolumbia.com/
-Direct Contact: Dr. Stiffler
+- Sponsor: Jakes on Devine - Columbia, SC
+- Industry: Restarant, Bar
+- Website: https://jakesofcolumbia.com/
+- Direct Contact: Dr. Stiffler
 
 ## Project Description
 Jake’s on Devine is requesting a POS system, or Point of Sale system, ultimately a place to store all essential restaurant related information including sales, inventory, payment, trends in data, etc.
