@@ -21,5 +21,3 @@ Splitting roles wiht Group 02. Group 08 is working most directly with the "waite
 - HTML
 - Express.JS
 - Figma (https://www.figma.com/design/AXC6qapJKvmxbS3UFPUcJq/Untitled?node-id=0-1&t=Wm1965rzvOeW7Dx2-1)
-
-test, mike
