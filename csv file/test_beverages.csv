@@ -1,0 +1,10 @@
+category,subcategory,item_name,quantity,price
+Beverage,Water,Water,100,$0 
+Beverage,Soda,Root Beer,92,$2 
+Beverage,Soda,Sprite,47,$2 
+Beverage,Soda,Orange,62,$2 
+Beverage,Soda,Coke,58,$2 
+Beverage,Soda,Diet Coke,28,$2 
+Beverage,Juice/Mocktails,Sparkling Water,19,$1 
+Beverage,Juice/Mocktails,Apple Juice,37,$2 
+Beverage,Juice/Mocktails,Lemonade,72,$2 
