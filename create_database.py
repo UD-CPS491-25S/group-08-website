@@ -1,16 +1,15 @@
 import pandas as pd
 import sqlite3
 
-# Load CSV into a DataFrame
-csv_file = r"C:\Users\Owner\Downloads\test_beverages.csv"  # Update with your actual CSV file path
+csv_file = r"C:\Users\Owner\Downloads\test_beverages.csv"  # Each of us have our own path
 df = pd.read_csv(csv_file)
 
 # Connect to SQLite database (or create it)
-db_file = "items.db"  # SQLite database file
+db_file = "items.db"  # new file name
 conn = sqlite3.connect(db_file)
 cursor = conn.cursor()
 
-# Create a table (adjust column types if needed)
+# creates a table
 cursor.execute('''
     CREATE TABLE IF NOT EXISTS items (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -22,11 +21,10 @@ cursor.execute('''
     )
 ''')
 
-# Insert DataFrame records into the SQL table
 df.to_sql("items", conn, if_exists="replace", index=False)
 
-# Commit and close the connection
 conn.commit()
 conn.close()
 
+# database was successfully created in items.db
 print("Database created successfully!")
