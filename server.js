@@ -1,24 +1,38 @@
 const express = require("express");
+const sqlite3 = require("sqlite3").verbose();
+const cors = require("cors");
 const path = require("path");
-const database = require("./database");  // Import the functions from database.js
+
 const app = express();
+const PORT = 3000;
 
-// Serve static files (e.g., index.html, frontend.js)
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(cors()); // Allow frontend to access the backend
+app.use(express.json());
 
-// Endpoint to fetch items from the database
-app.get("/items", async (req, res) => {
-  try {
-    const items = await database.getItems();  // Get items from the database
-    res.json(items);  // Send the data as JSON response
-  } catch (error) {
-    console.error("Error fetching items:", error);
-    res.status(500).send("Error fetching items from the database.");
-  }
+// Serve static files from the frontend folder
+app.use(express.static(path.join(__dirname, "frontend")));
+
+// Connect to SQLite database
+const db = new sqlite3.Database("./items.db", sqlite3.OPEN_READWRITE, (err) => {
+    if (err) {
+        console.error("Database connection error:", err.message);
+    } else {
+        console.log("Connected to SQLite database.");
+    }
 });
 
-// Start the server on port 3000
-const PORT = 3000;
+// API endpoint to get all items
+app.get("/api/items", (req, res) => {
+    db.all("SELECT * FROM items", [], (err, rows) => {
+        if (err) {
+            res.status(500).json({ error: err.message });
+            return;
+        }
+        res.json(rows);
+    });
+});
+
+// Start the server
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`Server running on http://localhost:${PORT}`);
 });

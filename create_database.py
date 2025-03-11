@@ -1,12 +1,7 @@
 import pandas as pd
 import sqlite3
 
-<<<<<<< HEAD
 csv_file = r"C:\Users\Owner\Downloads\test_beverages.csv"  # Each of us have our own path
-=======
-# Load CSV into a DataFrame
-csv_file = r"/Users/michaelfrank/Desktop/SP25/CPS 491 - Capstone II/test_beverages.csv"  # Update with your actual CSV file path
->>>>>>> 40ac7d3174ddf7a362857765caad2c713538c8df
 df = pd.read_csv(csv_file)
 
 # Connect to SQLite database (or create it)
