@@ -3,12 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Point of Sale - Items</title>
+    <title>Point of Sale</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Medula+One&family=Courier+Prime&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">  <!-- ✅ Link to CSS -->
 </head>
 <body>
-    <h1>Point of Sale - Item List</h1>
-    <ul id="item-list"></ul> <!-- Items will be displayed here -->
 
-    <script src="app.js"></script>
+    <!-- Receipt Section -->
+    <div id="receipt">
+        <h2>Receipt</h2>
+        <ul id="receipt-list"></ul>
+        <p><strong>Total: $<span id="total">0.00</span></strong></p>
+        
+    </div>
+
+   
+    <!-- POS Controls -->
+    <div id="pos-container">
+
+       <!-- Search Bar -->
+    <input type="text" id="search-bar" placeholder="Search..." />
+
+        <!-- Category Selection -->
+        <div id="category" class="button-container">
+        </div>
+
+        <!-- Subcategory Selection -->
+        <div id="subcategory" class="button-container hidden">
+        </div>
+
+        <!-- Item Selection -->
+        <div id="items" class="button-container hidden">
+        </div>
+    </div>
+
+    <script src="app.js"></script>  <!-- ✅ Link to JavaScript -->
 </body>
 </html>
