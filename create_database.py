@@ -2,7 +2,7 @@ import pandas as pd
 import sqlite3
 
 # Load CSV into a DataFrame
-csv_file = r"C:\Users\Owner\Downloads\test_beverages.csv"  # Update with your actual CSV file path
+csv_file = r"/Users/michaelfrank/Desktop/SP25/CPS 491 - Capstone II/test_beverages.csv"  # Update with your actual CSV file path
 df = pd.read_csv(csv_file)
 
 # Connect to SQLite database (or create it)
@@ -14,11 +14,11 @@ cursor = conn.cursor()
 cursor.execute('''
     CREATE TABLE IF NOT EXISTS items (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        category TEXT,
+        category TEXT NOT NULL,
         subcategory TEXT,
-        item_name TEXT,
-        quantity INTEGER,
-        price REAL
+        item_name TEXT UNIQUE NOT NULL,
+        quantity INTEGER DEFAULT NULL,
+        price REAL NOT NULL
     )
 ''')
 
