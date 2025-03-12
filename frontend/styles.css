@@ -199,3 +199,20 @@ button {
 #pay-btn:hover {
     background-color: #409D64;
 }
+
+
+
+/*Images*/
+.logo-container {
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;      /* Centers vertically */
+    margin-top: auto;         /* Pushes it down */
+    margin-bottom: 20px;      /* Space above the footer */
+    height: 150px;            /* Adjust as needed */
+}
+
+.logo-container img {
+    width: 200px;  /* Adjust size */
+    height: auto;  /* Maintain aspect ratio */
+}
