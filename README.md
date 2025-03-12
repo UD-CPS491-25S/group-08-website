@@ -6,6 +6,7 @@
 - Industry: Restarant, Bar
 - Website: https://jakesofcolumbia.com/
 - Direct Contact: Dr. Stiffler
+- [Link to our most recent update - Month 2 Assignment](https://docs.google.com/document/d/1Y9jzidSItVYaYsFr7aIxeasRbQGyxsj_gFx0UkiEOwY/edit?usp=sharing)
 
 ## Project Description
 Jake’s on Devine is requesting a POS system, or Point of Sale system, ultimately a place to store all essential restaurant related information including sales, inventory, payment, trends in data, etc.
