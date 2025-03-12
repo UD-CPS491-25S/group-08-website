@@ -12,12 +12,28 @@
 
     <!-- Receipt Section -->
     <div id="receipt">
-        <h2>Receipt</h2>
+        <h2>Reciept</h2>
         <ul id="receipt-list"></ul>
         <p><strong>Subtotal: $<span id="subtotal">0.00</span></strong></p>
         <p><strong>Tax (6%): $<span id="tax">0.00</span></strong></p>
         <p><strong>Total: $<span id="total">0.00</span></strong></p>
-    </div>
+        <!-- Footer for totals and payment options -->
+        <!-- Footer for totals and payment options -->
+        <div id="receipt-footer">
+          <!-- Tip Selection -->
+          <div id="tip-selection">
+            <button class="tip-btn" data-tip="0.18">18% ($<span id="tip-18">0.00</span>)</button>
+            <button class="tip-btn" data-tip="0.20">20% ($<span id="tip-20">0.00</span>)</button>
+            <button class="tip-btn" data-tip="0.22">22% ($<span id="tip-22">0.00</span>)</button>
+        </div>
+        
+        <div id="final-total-section">
+            <strong>Final Total: $<span id="final-total">0.00</span></strong>
+        </div>
+        
+        <button id="pay-btn">Pay</button>
+        </div>
+      </div>
 
    
     <!-- POS Controls -->
@@ -38,6 +54,8 @@
         <div id="items" class="button-container hidden">
         </div>
     </div>
+
+    
 
     <script src="app.js"></script>  <!-- ✅ Link to JavaScript -->
 </body>

@@ -75,16 +75,16 @@ document.addEventListener("DOMContentLoaded", function () {
           }
 
           let subtotal = 0;
-          const TAX_RATE = 0.06; // 6% tax
+          const TAX_RATE = 0.06;
+          let selectedTip = 0; // Stores the selected tip amount
 
           function addToReceipt(item) {
               const receiptList = document.getElementById("receipt-list");
 
-              // Ensure price is a valid number
               const itemPrice = parseFloat(item.price);
               if (isNaN(itemPrice)) {
                   console.error("Invalid price detected for:", item);
-                  return; // Exit function if price is not valid
+                  return;
               }
 
               // Create a new list item
@@ -94,29 +94,73 @@ document.addEventListener("DOMContentLoaded", function () {
                   <span style="margin-left: auto;">$${itemPrice.toFixed(2)}</span>
               `;
 
-              // Ensure proper alignment
               listItem.style.display = "flex";
               listItem.style.justifyContent = "space-between";
               listItem.style.width = "100%";
 
-              // Append item to the receipt list
               receiptList.appendChild(listItem);
 
-              // ✅ Update subtotal
               subtotal += itemPrice;
-              console.log("Subtotal Updated:", subtotal); // Debugging step
 
-              // ✅ Calculate tax and total
+              updateTotals();
+          }
+
+          function updateTotals() {
               const tax = subtotal * TAX_RATE;
               const total = subtotal + tax;
 
-              // ✅ Update UI
               document.getElementById("subtotal").textContent = subtotal.toFixed(2);
               document.getElementById("tax").textContent = tax.toFixed(2);
               document.getElementById("total").textContent = total.toFixed(2);
 
-              console.log("Updated Totals -> Subtotal:", subtotal, "Tax:", tax, "Total:", total); // Debugging log
+              document.getElementById("tip-18").textContent = (total * 0.18).toFixed(2);
+              document.getElementById("tip-20").textContent = (total * 0.20).toFixed(2);
+              document.getElementById("tip-22").textContent = (total * 0.22).toFixed(2);
+
+              updateFinalTotal();
           }
+
+          function applyTip(tipPercentage, button) {
+              const total = subtotal + (subtotal * TAX_RATE);
+              selectedTip = total * tipPercentage;
+
+              // Remove active class from all buttons
+              document.querySelectorAll(".tip-btn").forEach(btn => btn.classList.remove("active"));
+
+              // Add active class to clicked button
+              button.classList.add("active");
+
+              updateFinalTotal();
+          }
+
+          function updateFinalTotal() {
+              const total = subtotal + (subtotal * TAX_RATE);
+              const finalTotal = total + selectedTip;
+
+              document.getElementById("final-total").textContent = finalTotal.toFixed(2);
+          }
+
+          function pay() {
+              alert(`Final total including tip: $${(subtotal + (subtotal * TAX_RATE) + selectedTip).toFixed(2)}`);
+          }
+
+          // ✅ Event Listeners for Tip Buttons (Fixes Clickability)
+          document.addEventListener("DOMContentLoaded", () => {
+              document.querySelectorAll(".tip-btn").forEach(button => {
+                  button.addEventListener("click", function() {
+                      applyTip(parseFloat(this.dataset.tip), this);
+                  });
+              });
+
+              document.getElementById("pay-btn").addEventListener("click", pay);
+          });
+
+
+
+
+        
+
+
 
         
       })
