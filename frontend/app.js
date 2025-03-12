@@ -74,15 +74,51 @@ document.addEventListener("DOMContentLoaded", function () {
               });
           }
 
+          let subtotal = 0;
+          const TAX_RATE = 0.06; // 6% tax
+
           function addToReceipt(item) {
               const receiptList = document.getElementById("receipt-list");
+
+              // Ensure price is a valid number
+              const itemPrice = parseFloat(item.price);
+              if (isNaN(itemPrice)) {
+                  console.error("Invalid price detected for:", item);
+                  return; // Exit function if price is not valid
+              }
+
+              // Create a new list item
               const listItem = document.createElement("li");
-              listItem.textContent = `${item.item_name} - $${item.price}`;
+              listItem.innerHTML = `
+                  <span>${item.item_name}</span>
+                  <span style="margin-left: auto;">$${itemPrice.toFixed(2)}</span>
+              `;
+
+              // Ensure proper alignment
+              listItem.style.display = "flex";
+              listItem.style.justifyContent = "space-between";
+              listItem.style.width = "100%";
+
+              // Append item to the receipt list
               receiptList.appendChild(listItem);
 
-              total += parseFloat(item.price);
+              // ✅ Update subtotal
+              subtotal += itemPrice;
+              console.log("Subtotal Updated:", subtotal); // Debugging step
+
+              // ✅ Calculate tax and total
+              const tax = subtotal * TAX_RATE;
+              const total = subtotal + tax;
+
+              // ✅ Update UI
+              document.getElementById("subtotal").textContent = subtotal.toFixed(2);
+              document.getElementById("tax").textContent = tax.toFixed(2);
               document.getElementById("total").textContent = total.toFixed(2);
+
+              console.log("Updated Totals -> Subtotal:", subtotal, "Tax:", tax, "Total:", total); // Debugging log
           }
+
+        
       })
       .catch(error => console.error("Error fetching items:", error));
 });

@@ -30,8 +30,13 @@ body {
 }
 
 #receipt-list li {
+    display: flex;
+    justify-content: space-between; /* Item name on the left, price on the right */
+    font-family: Coustard;
+    font-weight: 400;
     padding: 5px;
     border-bottom: 1px solid #ddd;
+    width: 100%; /* Ensures items take full width */
 }
 
 #total {
