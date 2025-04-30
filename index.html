@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jakes on Devine - Capstone Project</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#client-info">Client Information</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#project-description">Project Description</a></li>
+      <li><a href="#month1">Month 1</a></li>
+      <li><a href="#month2">Month 2</a></li>
+      <li><a href="#month3">Month 3</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header Section -->
+  <header class="main-header">
+    <h1>Jakes on Devine</h1>
+    <p class="sub-heading">Capstone Project Spring 2025 - Team 8</p>
+  </header>
+
+  <!-- Client Information Section -->
+    <section id="client-info">
+        <h2>CLIENT INFORMATION</h2>
+        <div class="client-details">
+        <div class="client-logo">
+            <img src="images/Jakes Logo.png" alt="Client Logo">
+        </div>
+        <div class="client-info">
+            <h3>Jakes on Devine - Columbia, SC</h3>
+            <p>Jake's on Devine, located at 2112 Devine Street in Columbia, South Carolina, is a beloved bar and grill known for its dog friendly, and fun atmosphere. Jake's offers patrons a blend of good food, a diverse selection of craft beers, and engaging events. </p>
+            <p><strong>Contact: Kyle Stiffler or Dr. Nick Stiffler.</strong> nstiffler1@udayton.edu </p>
+        </div>
+        </div>
+    </section>
+
+
+  <!-- Team Section -->
+  <section id="team" class="team-section">
+    <h2>MEET THE TEAM</h2>
+    <div class="team-member">
+        <img src="images/lexieheadshot.jpg" alt="Team Member 1">
+      <h3>Alexis Lane</h3>
+      <p>Senior Computer Science Student</p>
+      <p><a href="https://www.linkedin.com/in/alexisklane/">LinkedIn</a></p>
+    </div>
+    <div class="team-member">
+        <img src="images/mikeheadshot2.jpg" alt="Team Member 2">
+      <h3>Mike Frank</h3>
+      <p>Senior Computer Science Student</p>
+      <p><a href="https://www.linkedin.com/in/michaeljosephfrank/">LinkedIn</a></p>
+    </div>
+    <div class="team-member">
+        <img src="images/meganheadshot.jpg" alt="Team Member 3">
+      <h3>Megan Flynn</h3>
+      <p>Senior Computer Science Student</p>
+      <p><a href="https://www.linkedin.com/in/megan-flynn-911296222/">LinkedIn</a></p>
+    </div>
+  </section>
+
+  <!-- Project Description Section -->
+  <section id="project-description" class="project-description">
+    <h2>PROJECT DESCRIPTION</h2>
+    <p>Jakes on Devine is an innovative platform that aims to revolutionize the way restaurant orders are managed, focusing on simplicity, speed, and customer satisfaction. The project leverages cutting-edge technologies and modern UI/UX principles to deliver a seamless experience for both restaurant staff and customers.</p>
+  </section>
+
+  <!-- Monthly Progress Sections -->
+  <section id="month1" class="monthly-progress">
+    <h2>MONTH ONE</h2>
+    <p>During Month One, our team spent the beginning of the month understanding the scope
+      of our project. Dr. Stiffler was able to introduce us to the idea of a POS (Point of Sale) system, 
+      and we narrowed down what this design could look like. Minor details like types of data we could 
+      test with, ideas for databases, and even the tech stack possibilities were discussed in this first meeting.
+    </p>
+  
+    <!-- Steps / Milestones -->
+    <div class="month-steps">
+      <div class="step">
+        <h3>Schema Creation</h3>
+        <p>Began formulating our schema that would ultimately be the test data for our databases/inventory.</p>
+        <div class="image-container">
+            <img src="images/Neo4j Schema 1 Graph (1).png" alt="UI Design">
+          </div>
+      </div>
+  
+      <div class="step">
+        <h3>Database Testing</h3>
+        <p>The previous Capstone I database, which used MongoDB, was tested and showed several flaws and disadvantages. 
+            The schema that had been created earlier was used for the testing. Then, a new database technology, Neo4J, 
+            was tested based on Dr. Stiffler's recommendation. Neo4J turned out to be much easier to use, with visual 
+            data representation that made analysis simpler. Although the final decision on the database hadn't been fully made, 
+            Neo4J was fully developed and was expected to be the go-to choice for the POS system.</p>
+            <div class="logo-container">
+                <img src="images/MongoDB-Logo.png" alt="UI Design">
+                <img src="images/neo4j logo.png" alt="UI Design">
+            </div>              
+      </div>
+  
+      <div class="step">
+        <h3>Early UI Design</h3>
+        <p>Designed early-stage schema and planned data relationships for items, orders, and categories.</p>
+        <div class="image-container">
+          <img src="images/First Diagram 1.jpg" alt="UI Design">
+          <img src="images/First Diagram 2.jpg" alt="UI Design">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+
+  
+
+  <section id="month2" class="monthly-progress">
+    <h2>MONTH TWO</h2>
+    <p>In Month Two, our team found its rhythm after a somewhat irregular start in Month One. With more consistent 
+      team meetings and a few check-ins with our client, Dr. Stiffler, we were able to align on project expectations 
+      and make significant progress.
+    </p>
+  
+    <!-- Steps / Milestones -->
+    <div class="month-steps">
+  
+      <div class="step">
+        <h3>Database Development</h3>
+        <p>We focused on building a working SQLite3 database and Python script that could be run on all team members' devices. 
+          The script rebuilds the database on each run, enabling easy updates. With the help of Dr. Stiffler’s GitHub scripts, 
+          and after learning how to use SQLite and Pandas, we successfully created and displayed the database using two scripts. 
+          This allowed us to view data in a clean table format and ensure consistent local copies across all machines.</p>
+        <div class="image-container">
+          <img src="images/sqlite.png" alt="SQLite Logo">
+          <img src="images/Pandas.png" alt="Pandas Logo">
+        </div>
+      </div>
+  
+      <div class="step">
+        <h3>UI Prototyping with Figma</h3>
+        <p>Front-end development took place alongside backend work. Using Figma, we created several application screen 
+          mockups. Figma's intuitive tools and educational development features allowed us to convert designs into 
+          usable code for our stylesheets and front-end files within the repository.</p>
+        <div class="image-container">
+          <img src="images/figma1.png" alt="Figma UI Design 1">
+          <img src="images/figma2.png" alt="Figma UI Design 2">
+        </div>
+      </div>
+  
+      <div class="step">
+        <h3>Front-End Integration</h3>
+        <p>After confirming database-to-browser connectivity, we evolved from a basic black-screen text display to a 
+          structured button layout inspired by our Figma designs. This layout introduced a hierarchy that mirrored the 
+          simplicity of platforms like Toast. We then implemented features such as a search bar, a dynamic receipt display, 
+          subtotal/tax/total calculators, and automatic tip buttons—all styled with CSS based on our Figma designs. Scroll 
+          to Month 3 to see our working front-end!</p>
+
+      </div>
+  
+    </div>
+  </section>
+  
+
+  <section id="month3" class="monthly-progress">
+    <h2>MONTH THREE</h2>
+    <p>
+      During Month Three, our team made the final fixes to some UI bugs and accessibility modes, we added PIN login functionality for two user types, created the logout button, and began this documentation for the project. We put a bow on the project, and presented our final product to the University of Dayton Department of Computer Science on April 28, 2025.
+    </p>
+    <br/>
+    <p>
+      Please watch our full demo <a href="https://drive.google.com/file/d/1R_dDwe-u4stLI6fn6JRjORO4K6LNJeoE/view?usp=sharing">here</a>!
+    </p>
+    <br/>
+    <p>
+      And find our database creation demo <a href="https://drive.google.com/file/d/1yI3RO2A6Ybs4sQhAZh4bthfaKsmcK6ct/view?usp=sharing">here</a>!
+    </p>
+  </section>
+
+  <footer>
+    <p>Created by Team 8</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

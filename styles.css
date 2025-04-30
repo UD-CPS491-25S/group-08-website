@@ -1,0 +1,341 @@
+
+/* styles.css or your main CSS file */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #8a8a8a;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+  
+  .navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar ul li {
+    margin: 0 15px;
+  }
+  
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  
+  .navbar ul li a:hover {
+    color: #a458fb;
+    border-bottom: 2px solid #a458fb;
+  }
+  
+  /* Header Section */
+  .main-header {
+    background-color: #a458fb;
+    text-align: center;
+    padding: 100px 20px;
+    color: white;
+  }
+  
+  .main-header h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .main-header .sub-heading {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  
+  /* Team Section */
+  .team-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f3f3f3;
+  }
+  
+  .team-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #a458fb;
+  }
+  
+  /* Team Member Container */
+.team-member {
+    display: inline-block;
+    width: 250px;   /* Adjusted width to match the larger images */
+    text-align: center;
+    margin: 0 20px;
+    padding-top: 0; /* Reduce padding at the top if needed */
+  }
+  
+  
+  
+  
+  /* Team Section */
+  .team-member img {
+    width: 200px;  /* Increased width */
+    height: 200px; /* Increased height */
+    border-radius: 50%; /* Keeps the images circular */
+    object-fit: cover;  /* Ensures the images fill the circle without distortion */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    margin-top: -20px; /* Move the image upwards */
+    transform: translateY(-20px);  /* Moves the image upwards */
+  }
+  
+  
+  
+  .team-member h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .team-member p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #666;
+  }
+  
+  /* Project Description Section */
+  .project-description {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .project-description h2 {
+    font-size: 2rem;
+    color: #a458fb;
+  }
+  
+  .project-description p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 20px auto;
+    color: #333;
+  }
+  
+  /* Monthly Progress Sections */
+  .monthly-progress {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .monthly-progress h2 {
+    font-size: 2rem;
+    color: #a458fb;
+    margin-bottom: 20px;
+  }
+  
+  .monthly-progress p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+  }
+  
+  /* Smooth Scroll for Anchor Links */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+
+  /* Client Information Section */
+#client-info {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+  }
+  
+  #client-info h2 {
+    font-size: 2rem;
+    color: #a458fb;
+    margin-bottom: 20px;
+  }
+  
+  .client-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    text-align: left;
+  }
+  
+  .client-logo img {
+    width: 200px;  /* Adjust size of client logo */
+    height: auto;
+  }
+  
+  .client-info {
+    max-width: 500px;
+  }
+  
+  .client-info h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .client-info p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #666;
+  }
+  
+
+
+ /*MONTH SECTIOND*/ 
+/* General Layout Styling */
+body {
+    font-family: poppins, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .monthly-progress {
+    text-align: center;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+  }
+  
+  h2 {
+    font-family: poppins, sans-serif;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-family: poppins, sans-serif;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 40px;
+  }
+  
+  /* Steps Styling */
+  .month-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .step {
+    padding: 30px;
+  }
+  
+  .step h3 {
+    font-family: poppins, sans-serif;
+    font-size: 25px;
+    color: #000000;
+    margin-bottom: 15px;
+  }
+  
+  .step p {
+    font-size: 20px;
+    color: #4d4c4c;
+    margin-bottom: 20px;
+  }
+  
+  /* Image Styling */
+  .step img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+  }
+
+  /* Container for images */
+  .image-container {
+    display: flex;
+    justify-content: center;  /* Centers the images horizontally */
+    align-items: center;      /* Centers the images vertically */
+    gap: 20px;  /* Optional: adds space between images */
+    margin-top: 20px; /* Space between the images and the text */
+  }
+  
+  .image-container img {
+    width: 60%; /* Increase the width of the images */
+    height: auto; /* Keep the aspect ratio intact */
+  }
+
+  /* Logo container for images */
+.logo-container {
+    display: flex;
+    justify-content: center;  /* Centers the images horizontally */
+    gap: 20px;  /* Optional: Adds space between images */
+    margin-top: 20px;  /* Optional: Adds space between images and other content */
+  }
+  
+  /* Style for images in the logo container */
+  .logo-container img {
+    width: 150px;  /* Set width of images */
+    height: auto;  /* Maintain aspect ratio */
+  }
+  
+  
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .monthly-progress {
+      padding: 10px;
+    }
+  
+    h2 {
+      font-size: 1.8rem;
+    }
+  
+    .step {
+      padding: 20px;
+    }
+  
+    .step h3 {
+      font-size: 1.3rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .image-container {
+      flex-direction: column; /* Stack images vertically */
+      align-items: center; /* Center align them */
+    }
+  
+    .image-container img {
+      width: 90%; /* Adjust the size on smaller screens */
+    }
+  }
+  
+  
