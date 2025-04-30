@@ -1,4 +1,8 @@
 # Jakes on Devine Homepage - Group 08
+
+### THIS IS OUR LIVE LINK FROM OUR PERSONAL REPO SINCE WE CANT DEPLOY HERE
+### https://lanea17.github.io/Capstone-Team-8/
+
 ### Team: Alexis Lane, Mike Frank, Megan Flynn
 
 ## Project Details
